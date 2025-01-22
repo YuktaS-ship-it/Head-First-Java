@@ -6,10 +6,26 @@ public class GuessGame {
    Player p2;
    Player p3;
    
+   @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Player1: "+p1.hashCode() + '\n');
+        sb.append("Player2: "+p2.hashCode()+ '\n');
+        sb.append("Player3: "+p3.hashCode()+'\n');
+
+        return sb.toString();
+   }
    public void startGame() {
+       System.out.println("======Instantiating 3 palyer objects========");
        p1 = new Player();
+       System.out.println("======HashCode of Player1 is: " + p1.hashCode() +" ========");
+
        p2 = new Player();
+       System.out.println("======HashCode of Player2 is: " + p2.hashCode() +"  ========");
+
        p3 = new Player();
+       System.out.println("======HashCode of Player3 is: " + p3.hashCode() +"  ========");
+
        int guessp1 = 0;
        int guessp2 = 0;
        int guessp3 = 0;
